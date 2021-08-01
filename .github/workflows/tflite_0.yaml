@@ -1,9 +1,3 @@
-name: android-armv8-gpu
-on:
-  watch:
-    types:
-    - started
-  workflow_dispatch:
 jobs:
   android-aarch64-gpu0:
     runs-on: ubuntu-latest
@@ -28,6 +22,7 @@ jobs:
         name: ${{ matrix.time }}
         path: bazel-bin/tensorflow/lite/tools/benchmark
     strategy:
+      fail-fast: false
       matrix:
         include:
         - sha: e9853febd5cf870523ddd99ef6e4fa45cd7047bd
@@ -93,6 +88,7 @@ jobs:
         name: ${{ matrix.time }}
         path: bazel-bin/tensorflow/lite/tools/benchmark
     strategy:
+      fail-fast: false
       matrix:
         include:
         - sha: 9fd90ad4c7815a9f3bdafe433034012857a158f5
@@ -158,6 +154,7 @@ jobs:
         name: ${{ matrix.time }}
         path: bazel-bin/tensorflow/lite/tools/benchmark
     strategy:
+      fail-fast: false
       matrix:
         include:
         - sha: a317cb2cdd61c3c34810fed4d3161dee109c0341
@@ -223,6 +220,7 @@ jobs:
         name: ${{ matrix.time }}
         path: bazel-bin/tensorflow/lite/tools/benchmark
     strategy:
+      fail-fast: false
       matrix:
         include:
         - sha: dec91cdf185c45d01d47fdbe9d83991c20b18d54
@@ -288,6 +286,7 @@ jobs:
         name: ${{ matrix.time }}
         path: bazel-bin/tensorflow/lite/tools/benchmark
     strategy:
+      fail-fast: false
       matrix:
         include:
         - sha: 2cc80a74f239817971b1e8669fa2d597ffde2cff
@@ -330,4 +329,10 @@ jobs:
           time: '2020-09-28'
         - sha: d6b5f296d2d92e2a025170352d2da41e570ba48b
           time: '2020-10-05'
+name: android-armv8-gpu
+'on':
+  watch:
+    types:
+    - started
+  workflow_dispatch: null
 
