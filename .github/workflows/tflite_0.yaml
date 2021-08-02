@@ -21,7 +21,7 @@ jobs:
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
-      run: bazel build -c opt --config=android_arm64 tensorflow/lite/tools/benchmark:benchmark_model
+      run: bash actions_build.sh
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
@@ -93,7 +93,7 @@ jobs:
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
-      run: bazel build -c opt --config=android_arm64 tensorflow/lite/tools/benchmark:benchmark_model
+      run: bash actions_build.sh
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
@@ -165,7 +165,7 @@ jobs:
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
-      run: bazel build -c opt --config=android_arm64 tensorflow/lite/tools/benchmark:benchmark_model
+      run: bash actions_build.sh
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
@@ -237,7 +237,7 @@ jobs:
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
-      run: bazel build -c opt --config=android_arm64 tensorflow/lite/tools/benchmark:benchmark_model
+      run: bash actions_build.sh
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
@@ -309,7 +309,7 @@ jobs:
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
-      run: bazel build -c opt --config=android_arm64 tensorflow/lite/tools/benchmark:benchmark_model
+      run: bash actions_build.sh
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
