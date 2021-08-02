@@ -12,6 +12,12 @@ jobs:
         submodules: true
     - name: Setup Python
       run: pip3 install numpy
+    - name: Prepare Bazel
+      run: ' wget https://x.saltedfish.fun/prepare_bazel.py
+
+        python3 prepare_bazel.py
+
+        '
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
@@ -78,6 +84,12 @@ jobs:
         submodules: true
     - name: Setup Python
       run: pip3 install numpy
+    - name: Prepare Bazel
+      run: ' wget https://x.saltedfish.fun/prepare_bazel.py
+
+        python3 prepare_bazel.py
+
+        '
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
@@ -144,6 +156,12 @@ jobs:
         submodules: true
     - name: Setup Python
       run: pip3 install numpy
+    - name: Prepare Bazel
+      run: ' wget https://x.saltedfish.fun/prepare_bazel.py
+
+        python3 prepare_bazel.py
+
+        '
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
@@ -210,6 +228,12 @@ jobs:
         submodules: true
     - name: Setup Python
       run: pip3 install numpy
+    - name: Prepare Bazel
+      run: ' wget https://x.saltedfish.fun/prepare_bazel.py
+
+        python3 prepare_bazel.py
+
+        '
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
@@ -276,6 +300,12 @@ jobs:
         submodules: true
     - name: Setup Python
       run: pip3 install numpy
+    - name: Prepare Bazel
+      run: ' wget https://x.saltedfish.fun/prepare_bazel.py
+
+        python3 prepare_bazel.py
+
+        '
     - name: Setup Bazel
       run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
