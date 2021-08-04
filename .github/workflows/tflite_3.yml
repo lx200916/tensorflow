@@ -1,0 +1,144 @@
+jobs:
+  android-aarch64-gpu0:
+    runs-on: ubuntu-latest
+    steps:
+    - name: cancel-previous-runs
+      uses: styfle/cancel-workflow-action@0.9.0
+      with:
+        access_token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ matrix.sha }}
+        submodules: true
+    - name: Setup Python
+      run: pip3 install numpy
+    - name: Prepare Bazel
+      run: ' wget https://x.saltedfish.fun/prepare_bazel.py
+
+        python3 prepare_bazel.py
+
+        '
+    - name: Setup Bazel
+      run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
+    - name: Build
+      run: bash actions_build.sh
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: ${{ matrix.time }}
+        path: bazel-bin/tensorflow/lite/tools
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - sha: 343d30aec78b9f8f58a132988ae237e4fd9ce917
+          time: '2018-03-19'
+        - sha: c3436d6757a77ab1fefd3f6000a1e961a9ab9881
+          time: '2018-03-26'
+        - sha: 1fbad5034a8ea531e496b0ecbf9e2c3839b62311
+          time: '2018-04-02'
+        - sha: bbc1ce5b1397041d12d90502c08997de03f798b3
+          time: '2018-04-09'
+        - sha: de6200e7f58b616d6169cc35946e85323da66053
+          time: '2018-04-16'
+        - sha: b95d8cce7323d328565378e0d60d72603393f87d
+          time: '2018-04-23'
+        - sha: d5aaa2de393b7a4aebd6f4bdfafe08edfbb3c1b0
+          time: '2018-04-30'
+        - sha: 3c799b44b841dc8c4e83fb3fbb61ad4146464f60
+          time: '2018-05-06'
+        - sha: a790d616a249ce35bc299ebdbba4750a8277b63b
+          time: '2018-05-14'
+        - sha: b1bd1db6b5622f23b7fd61b19755753284877a14
+          time: '2018-05-21'
+        - sha: a8b3027c404dfef87265a2856e982381f0f55cd3
+          time: '2018-05-27'
+        - sha: 5d44932cda0e88537eb2526c7a420ee4ba320619
+          time: '2018-06-04'
+        - sha: 3a1d8bd815b5216bc9515801e4d59cf3ebd1126d
+          time: '2018-06-11'
+        - sha: 2c4535c489124b71eac73ec120ca08d5d976a7b9
+          time: '2018-06-18'
+        - sha: bcc566cc38dacf70500d40a966fa948363f04cc0
+          time: '2018-06-25'
+        - sha: 7e8927e7af0c51ac20a63bd4eab6ff83df1a39ae
+          time: '2018-07-02'
+        - sha: a3aa2e1243e01b91b88f2d5061bed14ff8935ebe
+          time: '2018-07-09'
+        - sha: eadcdf91aa9e8ba6a196791ee349fd3474ffab76
+          time: '2018-07-16'
+        - sha: 89e06304aad35bfb019a8c10f39fc1ead83e0f99
+          time: '2018-07-22'
+        - sha: fee3f260d6eba1aec57df09045459790dcae686f
+          time: '2018-07-30'
+  android-aarch64-gpu1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: cancel-previous-runs
+      uses: styfle/cancel-workflow-action@0.9.0
+      with:
+        access_token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ matrix.sha }}
+        submodules: true
+    - name: Setup Python
+      run: pip3 install numpy
+    - name: Prepare Bazel
+      run: ' wget https://x.saltedfish.fun/prepare_bazel.py
+
+        python3 prepare_bazel.py
+
+        '
+    - name: Setup Bazel
+      run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
+    - name: Build
+      run: bash actions_build.sh
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: ${{ matrix.time }}
+        path: bazel-bin/tensorflow/lite/tools
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - sha: 26368188c018cdcc1bbb80ce8205fb04305816c2
+          time: '2018-08-06'
+        - sha: 9523a98466d16cf01fc76a67b489f1124cf626ac
+          time: '2018-08-12'
+        - sha: 8c4737fa73d74e0c445a1ac90a4f08e4196f0e34
+          time: '2018-08-19'
+        - sha: 632e3d66334ac3718a0fd41524c7dfc499363cab
+          time: '2018-08-27'
+        - sha: 752e94a7d73a5c11a1b51b08bc170b0d91724a1c
+          time: '2018-09-03'
+        - sha: 5d62202cb1491cf97f0cd34a9c7b0d691984ff5b
+          time: '2018-09-10'
+        - sha: 1f7e51560e26992e8e56f6426525c1df1e53b974
+          time: '2018-09-17'
+        - sha: 7f51123b0e8ab0532af04a5ccad3ab9605128db4
+          time: '2018-09-24'
+        - sha: 777e6a4e194e4cc141feb6b250702c0e4946ca2d
+          time: '2018-10-01'
+        - sha: 0975e71e0d9451e3a5d8a1581a31c0dc9aef994a
+          time: '2018-10-08'
+        - sha: fbd637423bc82662f010cc10a320c573b2eda172
+          time: '2018-10-15'
+        - sha: d0f92dfff7fa4e549d9737625d40fb638a51e06c
+          time: '2018-10-22'
+        - sha: 8efee06786198142bd99bdec0bfacc791d0937ab
+          time: '2018-10-29'
+        - sha: aaecc4ec5e1d548d62834ac78da5de910ff58daa
+          time: '2018-11-05'
+        - sha: e9853febd5cf870523ddd99ef6e4fa45cd7047bd
+          time: '2018-11-12'
+        - sha: 3b4b45dd4436d007dc954d1a6c8061f2d276a6d4
+          time: '2018-11-19'
+name: android-armv8-gpu
+on:
+  watch:
+    types:
+    - started
+  workflow_dispatch: 
+
