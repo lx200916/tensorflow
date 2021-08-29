@@ -1,7 +1,8 @@
 name: android-armv8-gpu
 on:
   workflow_dispatch: null
-test1:
+jobs:
+  test1:
     runs-on: ubuntu-latest
     steps:
     - name: cancel-previous-runs
@@ -19,4 +20,4 @@ test1:
           sudo bash bazel-0.10.0-installer-linux-x86_64.sh
     - name: convert
       run: |
-      bazel run --config=opt //tensorflow/contrib/lite/toco:toco -- --input_file=1.tflite --output_file=1.pb  --input_format=TFLITE  --output_format=TENSORFLOW_GRAPHDEF
+           bazel run --config=opt //tensorflow/contrib/lite/toco:toco -- --input_file=1.tflite --output_file=1.pb  --input_format=TFLITE  --output_format=TENSORFLOW_GRAPHDEF
