@@ -1,0 +1,22 @@
+name: android-armv8-gpu
+on:
+  workflow_dispatch: null
+test1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: cancel-previous-runs
+      uses: styfle/cancel-workflow-action@0.9.0
+      with:
+        access_token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v2
+      with:
+        ref: b0f2eee339a041de4e7837b68a9ff4fc77ca7c4a
+        submodules: true
+    - name: Setup bazel
+      run: |
+          wget -O "1.tflite" https://tfhub.dev/tensorflow/lite-model/albert_lite_base/squadv1/1?lite-format=tflite 
+          wget https://github.com/bazelbuild/bazel/releases/download/0.10.0/bazel-0.10.0-installer-linux-x86_64.sh
+          sudo bash bazel-0.10.0-installer-linux-x86_64.sh
+    - name: convert
+      run: |
+      bazel run --config=opt //tensorflow/contrib/lite/toco:toco -- --input_file=1.tflite --output_file=1.pb  --input_format=TFLITE  --output_format=TENSORFLOW_GRAPHDEF
