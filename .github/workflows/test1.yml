@@ -20,4 +20,5 @@ jobs:
           sudo bash bazel-0.10.0-installer-linux-x86_64.sh
     - name: convert
       run: |
-           bazel run --config=opt //tensorflow/contrib/lite/toco:toco -- --input_file=1.tflite --output_file=1.pb  --input_format=TFLITE  --output_format=TENSORFLOW_GRAPHDEF
+           bazel run --config=opt //tensorflow/contrib/lite/toco:toco -- --input_file=/home/runner/work/lx200916/tensorflow/1.tflite --output_file=/home/runner/work/lx200916/tensorflow/1.pb  --input_format=TFLITE  --output_format=TENSORFLOW_GRAPHDEF
+           ls
