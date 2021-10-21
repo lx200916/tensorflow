@@ -25,52 +25,52 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
-        name: ${{ matrix.time }}
-        path: bazel-bin/tensorflow/lite/tools/benchmark
+        name: ${{ matrix.sha }}
+        path: bazel-bin/tensorflow/lite/tools
     strategy:
       fail-fast: false
       matrix:
         include:
-        - sha: e9853febd5cf870523ddd99ef6e4fa45cd7047bd
-          time: '2018-11-12'
-        - sha: 3b4b45dd4436d007dc954d1a6c8061f2d276a6d4
-          time: '2018-11-19'
-        - sha: 6f9082773ea05e2be8f86ee97ada70889777b44a
-          time: '2018-11-26'
-        - sha: 2ce0bec9da49d1848ff72233e187b2d12e59b182
-          time: '2018-12-03'
-        - sha: 54b110ae4369f86518f3950f11be749df2507c29
-          time: '2018-12-10'
-        - sha: feaaa82259a204b037eb9bd72ab2f74f9f4fe431
-          time: '2018-12-17'
-        - sha: 9f23c56c7ed3bbbce31a22af61e87aa559c2bafe
-          time: '2018-12-24'
-        - sha: 4083cc3b3b9614e5ed013858d8727a2e08df1e25
-          time: '2018-12-31'
-        - sha: b8f2207ead5c6ce6e7e98479a88a08e4977aa83d
-          time: '2019-01-07'
-        - sha: ac4d3682939dac303082097d25ebda805409acde
-          time: '2019-01-14'
-        - sha: e6dbfa1790419a6bd857bdb14240a7f67165fc42
-          time: '2019-01-21'
-        - sha: 0f59cbd29738833655eeffe314b9b7f6667e6005
-          time: '2019-01-27'
-        - sha: 5076adf64a87d2370f84dec371178568f3a5daf9
-          time: '2019-02-04'
-        - sha: 29b27f3066ac99d3f01c65115bdd2b6cd4e2ccc7
-          time: '2019-02-11'
-        - sha: b9314a0d5b5344c8a8a1fbb67cd05fa5b2b224cb
-          time: '2019-02-18'
-        - sha: f064df8da3748d9eb76245fc8a13c2db853da234
-          time: '2019-02-25'
-        - sha: c1487a9c93798142319d721e4d3b67f874a6df6f
-          time: '2019-03-04'
-        - sha: 2ee5e71e34358feaefd8714598f9947bf258eb5e
-          time: '2019-03-11'
-        - sha: 3db23915df7b362b18005b3cc6a4abc5cba12b2f
-          time: '2019-03-18'
-        - sha: b95c201d3961768f11a66cc1d1cf2651c8b683cf
-          time: '2019-03-25'
+        - sha: f757bf9048574d2a0d4a5cba0b063653bedb19ec
+          time: '2019-04-02'
+        - sha: 7df428c533243bfed2fb46ff3ce671318eac3a29
+          time: '2019-04-02'
+        - sha: c7d131d49e80ba67256b88ce162f3f2eee3a45e4
+          time: '2019-04-02'
+        - sha: 4ee64e012ad7dfdfeceffc4f2ef62acd69c84410
+          time: '2019-04-02'
+        - sha: 269e8a35bdfd35b2c4923ac4867524109c6e9b55
+          time: '2019-04-02'
+        - sha: 87489728223f684e48ef680d4a1ea3ece3f750ae
+          time: '2019-04-02'
+        - sha: 7362d37521d3c14617f3355c66a0f6e5d1e80409
+          time: '2019-04-01'
+        - sha: d424ed5fdc0c86934e7da302a1523272702903e3
+          time: '2019-04-01'
+        - sha: d6aa41f1e21d4876ef208cc2e06bf45dcfeee473
+          time: '2019-04-01'
+        - sha: 3c98419e46c7f3d8fbcd15a3a11da081a4ea2bca
+          time: '2019-04-01'
+        - sha: 2699ef10f22ef7b79412b215dfcb79f26aeb5d54
+          time: '2019-04-01'
+        - sha: f6822df38cb0b820e2229f07d0a93f215f2dae42
+          time: '2019-04-01'
+        - sha: 1f95ffbfd982ba7ede6d12788ab993510f53bb2f
+          time: '2019-04-01'
+        - sha: fad7651026efb5dcbfe42a6b0c146118432cf340
+          time: '2019-04-01'
+        - sha: 6d22a8de5ad6d4ce2140da1b180a756c6ad2151a
+          time: '2019-04-01'
+        - sha: 648062909a17d40272495dd34adee3d7eb26b2b2
+          time: '2019-04-01'
+        - sha: b2a6450dcf79a1754341c5ba79461652c8b96466
+          time: '2019-04-01'
+        - sha: 5658441edf5ac88f8d1b2d248ea74acda6963593
+          time: '2019-04-01'
+        - sha: a4eaae2cbac8d71ee16dace5769afc24bc382e61
+          time: '2019-04-01'
+        - sha: 6e04e04eddf55dee81eaa8a4c9e066b24b182624
+          time: '2019-04-01'
   android-aarch64-gpu1:
     runs-on: ubuntu-latest
     steps:
@@ -97,52 +97,52 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
-        name: ${{ matrix.time }}
-        path: bazel-bin/tensorflow/lite/tools/benchmark
+        name: ${{ matrix.sha }}
+        path: bazel-bin/tensorflow/lite/tools
     strategy:
       fail-fast: false
       matrix:
         include:
-        - sha: 9fd90ad4c7815a9f3bdafe433034012857a158f5
+        - sha: 18d216f3040e4db49c62e5c9a0eda4e163325295
           time: '2019-04-01'
-        - sha: 411df5e681262f3a2d2c306368be3fe4e74edb03
-          time: '2019-04-08'
-        - sha: 0c464c70cef2369b6ef5c5e17dbd2cda2a6107fb
-          time: '2019-04-15'
-        - sha: ac5b31c724884819eff5e3290e0672c57bef3053
-          time: '2019-04-22'
-        - sha: 64799f90325368ce1fc62c31381e888f0e80d8b7
-          time: '2019-04-29'
-        - sha: 95563eb20d5df70e4fec75f2f0fcf6662461ba25
-          time: '2019-05-06'
-        - sha: 59bea3a8eae8bfdee8d9b5991b45f2e793d15c7d
-          time: '2019-05-13'
-        - sha: 81f21655b972d981f5e31b1918c7f18fe72e699b
-          time: '2019-05-20'
-        - sha: c5b8e150645e5c2178b65477ad575c35279124d8
-          time: '2019-05-27'
-        - sha: 058a81d0c6dd3ff25f5e2d04b8ffd3c573a26efc
-          time: '2019-06-03'
-        - sha: 5f7337874435bf44c6005593568a2dfa8d5c2806
-          time: '2019-06-10'
-        - sha: d8d426ab9425f71a743ed9a2360f6caa05e289f2
-          time: '2019-06-17'
-        - sha: 31a492886cbc4f62494cbe08189ce72d8892c9c1
-          time: '2019-06-24'
-        - sha: 950fac03a362d1df71231cd6b515804209062c14
-          time: '2019-07-01'
-        - sha: dcb3eec82f71cc46e4b2708fc74a53c67eb7f195
-          time: '2019-07-08'
-        - sha: 038bace3d62aa96fa280a1159f1375a44f00a705
-          time: '2019-07-14'
-        - sha: b4e562543795c5e48e8c751d795449a8621ac720
-          time: '2019-07-22'
-        - sha: d4bc7d98c60ccd4034abf95c39e4eab6c5066016
-          time: '2019-07-29'
-        - sha: 00581c6347ffcf42467f64e6b458b8e70d1bca98
-          time: '2019-08-05'
-        - sha: d13df711d95e08fec2a95eb6b7ae5bb1d70d4b33
-          time: '2019-08-12'
+        - sha: 82bbe77119195aa9ca5736b78bd31204e9448261
+          time: '2019-04-01'
+        - sha: f93b077cee21567adc80a362c9ca399c73c97cd5
+          time: '2019-03-31'
+        - sha: a53f1cb124180b6c269556de67ec6d3cb5ce79ab
+          time: '2019-03-31'
+        - sha: 288db71a37dc852e6bdc6faf5d52b962f43297ce
+          time: '2019-03-31'
+        - sha: 9bf7252c9487118d7d32d09ec599e68c19585534
+          time: '2019-03-31'
+        - sha: 07541231eef1c1a001169634b6f8fb66edf9376c
+          time: '2019-03-31'
+        - sha: c6b4b2c791a398450737e83461d14ee463006810
+          time: '2019-03-31'
+        - sha: 4321f790b0c5773f8c850f4effb54b12e153efa2
+          time: '2019-03-31'
+        - sha: 5d24d0e06038af8ab6c9964a3888958f2f3667aa
+          time: '2019-03-30'
+        - sha: ef968b404cc5439d3c89547207c954e2df12c3a0
+          time: '2019-03-30'
+        - sha: 1200c7d7d09aa7ad671b7c2936c73b56626ff14c
+          time: '2019-03-30'
+        - sha: 7384c1b7bd0a9954d97ec2a90cb17d1deab7bb94
+          time: '2019-03-29'
+        - sha: f7c8bb219b7c3246ae0206750f21a435f389766f
+          time: '2019-03-29'
+        - sha: 7f3488f0d698e674141d15c0316a4d4ce2f1f964
+          time: '2019-03-29'
+        - sha: f3decfd4b3b30bee73f80045d59b2dab2515abf3
+          time: '2019-03-29'
+        - sha: 0d44b530c143c3045b25f7f4aa3f5fc2ee9e8268
+          time: '2019-03-29'
+        - sha: 1de4de128c03f4beb09266cf5abc145a0b170e91
+          time: '2019-03-29'
+        - sha: 1060800745ab6df38cc9c242e7bb07493a6050df
+          time: '2019-03-29'
+        - sha: 46252f32b9aeb335e1194b0b2b62d0584813a61a
+          time: '2019-03-29'
   android-aarch64-gpu2:
     runs-on: ubuntu-latest
     steps:
@@ -169,52 +169,52 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
-        name: ${{ matrix.time }}
-        path: bazel-bin/tensorflow/lite/tools/benchmark
+        name: ${{ matrix.sha }}
+        path: bazel-bin/tensorflow/lite/tools
     strategy:
       fail-fast: false
       matrix:
         include:
-        - sha: a317cb2cdd61c3c34810fed4d3161dee109c0341
-          time: '2019-08-19'
-        - sha: 3df8f52798f8e3b7649c5078b6a3c3dbc2fccb1f
-          time: '2019-08-26'
-        - sha: 75f229b10f4fb8f426d652ba84eee973a2da9ffe
-          time: '2019-09-02'
-        - sha: 9a94937a32bcefa861773e675351d8075bf50522
-          time: '2019-09-09'
-        - sha: 4fe6d20cbdb985224471d65fa2d75cacacec95b9
-          time: '2019-09-16'
-        - sha: c33b99e859e70f5acb8d62909ab364a26e60954e
-          time: '2019-09-23'
-        - sha: de723d2ab325b96608973cccbc73ce5974ee53ea
-          time: '2019-09-30'
-        - sha: e0a97f34c2858b7f0c7bf987501b42cfaca2275e
-          time: '2019-10-07'
-        - sha: acb32b90ef0b8a019251d3d8c7c94a4896b04e20
-          time: '2019-10-14'
-        - sha: e923d12bd12bae10c3a8c8b5f2a76a1723c37316
-          time: '2019-10-21'
-        - sha: 0a857c1de6dbeb4801bbaa82f16c4d4ababc24d0
-          time: '2019-10-28'
-        - sha: 82fde44990342551410c40a63806c4c825289c39
-          time: '2019-11-04'
-        - sha: ae26958577cdd426ee9f7a5668619aea626f0a22
-          time: '2019-11-11'
-        - sha: 2a6efd2e668f8418bdf1c60e8218791559724dc4
-          time: '2019-11-18'
-        - sha: f39f4ea3fa1834914bd6bd46b23b4cab9d474325
-          time: '2019-11-25'
-        - sha: 7ae1ed602403bcdfe73933f04770dfad0b2726e3
-          time: '2019-12-02'
-        - sha: 984f710a9f71e1d3fae358e207305e31b4f0d777
-          time: '2019-12-09'
-        - sha: 4e5e74f28484f112c68c8ea5d9801474585a6d24
-          time: '2019-12-16'
-        - sha: 070cf133e1e372a8efa6d3c2cfe85ae0e70c82f5
-          time: '2019-12-23'
-        - sha: d908b50245ca80f85bfe57b9ea8ff1b7558b1da2
-          time: '2019-12-30'
+        - sha: c2b23d148f3a2718e6f16f449406beaa75d0b512
+          time: '2019-03-29'
+        - sha: 6815ac3574dc40e4f56dae6745f695dd1eaab949
+          time: '2019-03-29'
+        - sha: 7b232b8ed1554dc8d5c371df63bc69c95608ec66
+          time: '2019-03-29'
+        - sha: fa5677a5e00ad2b6d037b1efa3ebc193834fd5c8
+          time: '2019-03-29'
+        - sha: 4f73ae879a1f1eda901c2eb99c08dde3341d544a
+          time: '2019-03-29'
+        - sha: b714ea3a2e041af1a659166dc8b4a1e051492ece
+          time: '2019-03-29'
+        - sha: 14044f340e7c75072dbfbe045fff0ca6780f13dd
+          time: '2019-03-29'
+        - sha: b2e46021e761729d14879eb31e7ffe299521fc44
+          time: '2019-03-29'
+        - sha: 569da7fd4a20d5cacc4e95c1c202d54d4fba3250
+          time: '2019-03-29'
+        - sha: 28930273074f1edccb9691ad3ff4b31f38464391
+          time: '2019-03-29'
+        - sha: 0d754fc516ec52ff8ace621b42151ebd514bb981
+          time: '2019-03-29'
+        - sha: 2b486e9beb8d5350ab637b2dd3238d6511c09c1c
+          time: '2019-03-29'
+        - sha: df928c64ac40eeacdd4d4586945317526809afa0
+          time: '2019-03-29'
+        - sha: 717c6cf5d68a4a6fa3b62ff081ec0581364e2afe
+          time: '2019-03-29'
+        - sha: 36197d4e7a4ce9fbb9969436d96f84e91a2c42fa
+          time: '2019-03-29'
+        - sha: 99b9098b9a3a9e70728c96eb7a8e995d350b5342
+          time: '2019-03-29'
+        - sha: 79122e21c808d1afca6be3e6c6e84fa7f2da9820
+          time: '2019-03-29'
+        - sha: 395c4662d08d0d5c78020e24bc3c522e451e8a53
+          time: '2019-03-29'
+        - sha: ba026b8520ec1688ff5ba3e5d554fdfde6cf5d38
+          time: '2019-03-28'
+        - sha: 58f52cb3e2a114daa25a3b0436ad946d7f2f3e3f
+          time: '2019-03-28'
   android-aarch64-gpu3:
     runs-on: ubuntu-latest
     steps:
@@ -241,52 +241,52 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
-        name: ${{ matrix.time }}
-        path: bazel-bin/tensorflow/lite/tools/benchmark
+        name: ${{ matrix.sha }}
+        path: bazel-bin/tensorflow/lite/tools
     strategy:
       fail-fast: false
       matrix:
         include:
-        - sha: dec91cdf185c45d01d47fdbe9d83991c20b18d54
-          time: '2020-01-06'
-        - sha: ce899395b4ee2c21c6c20fa4d98cbb8228c67de3
-          time: '2020-01-13'
-        - sha: 03a22559499b402d97814f641b82f44530997609
-          time: '2020-01-20'
-        - sha: f88440725cdf3808a20238864cfe75a5cd9f2f22
-          time: '2020-01-27'
-        - sha: 70a75a0ef00391d663afdb0c7442703ac726f983
-          time: '2020-02-03'
-        - sha: c24d2f910a448ca2f2410e759f0ad13862cb5ce3
-          time: '2020-02-10'
-        - sha: 5cd5d86ca5a303f37418f06e1526c5e3d85584cd
-          time: '2020-02-17'
-        - sha: c791f88565893537112cda921bd4dc2cf7e44664
-          time: '2020-02-24'
-        - sha: 0f895de2f92b54975bb35eb81609fbdfe2e1ab71
-          time: '2020-03-02'
-        - sha: 265241886503a11bddff821a0149f95c5869f76a
-          time: '2020-03-09'
-        - sha: abad79508b4fe77fa4bc01fc79a64b45efa49829
-          time: '2020-03-16'
-        - sha: 9278bbfc249233190c3901e9e6922d4077372899
-          time: '2020-03-23'
-        - sha: 31cb6df2c23b4894d0ee72cffa102452d2bcb048
-          time: '2020-03-30'
-        - sha: 879d04b1e201ab563111630db336baa791d63f7c
-          time: '2020-04-06'
-        - sha: b310f07cfa472034af12344e5316a36e2ab64dea
-          time: '2020-04-13'
-        - sha: b53fc48adba68410c983d9fb25f0edec68d52380
-          time: '2020-04-20'
-        - sha: 2d3828de27879655cc126bc2bb932de299b5153c
-          time: '2020-04-27'
-        - sha: ce72f093cbcf56d033a662a570393f3d0ad4197b
-          time: '2020-05-04'
-        - sha: ca55b85c00ba06d772e6a285b118ed060cc36062
-          time: '2020-05-11'
-        - sha: e480d8f7ff66dbab239019c9f202748f6fa1f661
-          time: '2020-05-18'
+        - sha: cf577b7a7a4b820bbba64e08abf4e4d7459179ae
+          time: '2019-03-28'
+        - sha: b5d67b7c69c67028f8881cfeb45bf1dd69f3fede
+          time: '2019-03-28'
+        - sha: fb772b781b011471dec443e1f3cd6b664958b767
+          time: '2019-03-28'
+        - sha: fd2db2136810e6fb4bf527e31fb848acad97fe9c
+          time: '2019-03-28'
+        - sha: b887194278b02322e6900cab743d627d95a1cff4
+          time: '2019-03-28'
+        - sha: 65635136e9be91a57ea8a0d7a708bd590f744849
+          time: '2019-03-28'
+        - sha: e73770500e8e0389e05dc273ac3b0fc4a8fd9a68
+          time: '2019-03-28'
+        - sha: a76fc0291473839d76676f8bf906fab218f3047c
+          time: '2019-03-28'
+        - sha: 53357b16f157faf24afd5276340d3cdba188f64c
+          time: '2019-03-28'
+        - sha: f5e322329b96dab4ed0946e99a5dc0c9ef79deee
+          time: '2019-03-28'
+        - sha: 6410f05c96319ef16d1d4a4a6862e89bafec39ec
+          time: '2019-03-28'
+        - sha: d4d9627956a14dfea0a8c51c49e5ebccd6df0870
+          time: '2019-03-28'
+        - sha: c3606c810a48c1d05b9474202a1e963e53b7f29e
+          time: '2019-03-28'
+        - sha: 2330a4520f20834721b482982b0eda7e843a8a57
+          time: '2019-03-28'
+        - sha: d5da545d2679f3e166b62da3f040a82eee97384f
+          time: '2019-03-28'
+        - sha: 223bfa35f27a8e356c0912347138bdcf224a5427
+          time: '2019-03-28'
+        - sha: 72339c0fab73e8d275b46e780f8f5ef98ad1dd6d
+          time: '2019-03-28'
+        - sha: 70aa89e72f3f55a396f39856a5d51059db529a23
+          time: '2019-03-27'
+        - sha: 1ca65425ffe7db3eb435525631f69ee97d036aac
+          time: '2019-03-27'
+        - sha: c46f220ccbf943488595cf4cd4abd070c190dee5
+          time: '2019-03-27'
   android-aarch64-gpu4:
     runs-on: ubuntu-latest
     steps:
@@ -313,52 +313,52 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
-        name: ${{ matrix.time }}
-        path: bazel-bin/tensorflow/lite/tools/benchmark
+        name: ${{ matrix.sha }}
+        path: bazel-bin/tensorflow/lite/tools
     strategy:
       fail-fast: false
       matrix:
         include:
-        - sha: 2cc80a74f239817971b1e8669fa2d597ffde2cff
-          time: '2020-05-25'
-        - sha: d4042feb2d3d06b92f378b31e791dd7fdf70832d
-          time: '2020-06-01'
-        - sha: f65efd739cd93c0deeb1e0ae8c5a64d5250cac02
-          time: '2020-06-08'
-        - sha: 7b080ad2c1bd14562d90d3f480fc53b8838782bb
-          time: '2020-06-15'
-        - sha: 9f43ebd68c35a1f8f0f995352f7108b72fb41f50
-          time: '2020-06-22'
-        - sha: e89160d8d32de79b4235d5a83f73fba14bee72e0
-          time: '2020-06-29'
-        - sha: 108aa90714c8369a2392fba43fa62c2d0cec523a
-          time: '2020-07-06'
-        - sha: fba773beadbd9459a556c2c9dbb3c7b60f13b9d2
-          time: '2020-07-13'
-        - sha: 0ef821ada12ed58897acc96c02ddc31ee002501d
-          time: '2020-07-20'
-        - sha: e3de004639fb60fdc00554783757f37662e71f40
-          time: '2020-07-27'
-        - sha: 1e9b9b1568d550e6779d2ddd5d193968254d3029
-          time: '2020-08-03'
-        - sha: fc11ea4eec3a74dda5f7fd302ec5da07a12cdb82
-          time: '2020-08-10'
-        - sha: 36dabea8989e6c3c663795acc44a98d99f7c9a5f
-          time: '2020-08-17'
-        - sha: 09f5609f0fd282943defd4608ee90bb6883a394b
-          time: '2020-08-24'
-        - sha: 17eb743235f667272865dab7ca944f2a8e706d99
-          time: '2020-08-31'
-        - sha: 4b8df484f957cd6cfc0308e03940b8014d2aaa37
-          time: '2020-09-07'
-        - sha: ed1e38edcab9bd8d5e4c70221dbfe7dec8692b7b
-          time: '2020-09-14'
-        - sha: f3e7b592fdfec6c897de1476305b69da15bc18f7
-          time: '2020-09-21'
-        - sha: 700e5151fb58eedf9842f03175400b53dc585f09
-          time: '2020-09-28'
-        - sha: d6b5f296d2d92e2a025170352d2da41e570ba48b
-          time: '2020-10-05'
+        - sha: b9cebd38763f2f52b6a84bf72a1f64a5990d928d
+          time: '2019-03-27'
+        - sha: ac88b10f3fbe258e9322cd6913b4678574b4e57f
+          time: '2019-03-27'
+        - sha: e29d0968f4370ae796c1617883b83cee0f5a8fca
+          time: '2019-03-27'
+        - sha: 047abbc428f16a946abed69654d86bd8cfd69573
+          time: '2019-03-27'
+        - sha: 7cb3ab327eb073e9dbb41bd2139ae6628b839467
+          time: '2019-03-27'
+        - sha: 52d1af8c2920f7be17bd3d094f4e64deb4d7647c
+          time: '2019-03-27'
+        - sha: c18034bc927f733e5e5a43d0c421775f969e0d04
+          time: '2019-03-27'
+        - sha: ac7453057f8db5e8ee06a44151de1ce0a12ce6da
+          time: '2019-03-27'
+        - sha: a0cc6f9e9d4b5cc4ccbff3986138e0bf32e59080
+          time: '2019-03-27'
+        - sha: 824045be4ead9fc94848549ac2edcd9db0585b2d
+          time: '2019-03-27'
+        - sha: a00d1462c281d130d01c726ed7eeff81be9c86d4
+          time: '2019-03-27'
+        - sha: 9f9aa5f3692b4b40844e1be7a9b276d02a6f226e
+          time: '2019-03-27'
+        - sha: 38bb270a422bb6d9f1e772cc1e0073810029649a
+          time: '2019-03-27'
+        - sha: 65d68abc1fa09f2b3cdd31572b046abd90cf684c
+          time: '2019-03-27'
+        - sha: 8901eff3092d365b7dc714c2f826495f9902961d
+          time: '2019-03-27'
+        - sha: 118502b6c5b6ddd956cd0be6d9853ad551a4eda6
+          time: '2019-03-27'
+        - sha: d680d61e86d713d40472aa142b4aa24653918fa2
+          time: '2019-03-26'
+        - sha: 44c57c0118657a476c1c6410b5b1caf485dbb4be
+          time: '2019-03-26'
+        - sha: cdfedf48122e283709122759d11b58eb3bd7ed39
+          time: '2019-03-26'
+        - sha: 03f54df2253ccf1e006b1a0efe3c567caab985eb
+          time: '2019-03-26'
 name: android-armv8-gpu
 'on':
   watch:
