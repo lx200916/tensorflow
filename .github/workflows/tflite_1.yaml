@@ -18,6 +18,8 @@ jobs:
         python3 prepare_bazel.py
 
         '
+    - name: Setup Bazel
+      run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
       run: bash actions_build.sh
     - name: Upload a Build Artifact
@@ -88,6 +90,8 @@ jobs:
         python3 prepare_bazel.py
 
         '
+    - name: Setup Bazel
+      run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
       run: bash actions_build.sh
     - name: Upload a Build Artifact
@@ -158,6 +162,8 @@ jobs:
         python3 prepare_bazel.py
 
         '
+    - name: Setup Bazel
+      run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
       run: bash actions_build.sh
     - name: Upload a Build Artifact
@@ -228,6 +234,8 @@ jobs:
         python3 prepare_bazel.py
 
         '
+    - name: Setup Bazel
+      run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
       run: bash actions_build.sh
     - name: Upload a Build Artifact
@@ -298,6 +306,8 @@ jobs:
         python3 prepare_bazel.py
 
         '
+    - name: Setup Bazel
+      run: wget -O .tf_configure.bazelrc https://x.saltedfish.fun/tf_configure.bazelrc
     - name: Build
       run: bash actions_build.sh
     - name: Upload a Build Artifact
